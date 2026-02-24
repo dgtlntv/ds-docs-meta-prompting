@@ -11,24 +11,24 @@ Single entry point for all dockit work. Detects the current state and routes to 
 <execution_context>
 
 Workflow:
-- @.agents/dockit/workflows/start.md
+- @../dockit/workflows/start.md
 
 References:
-- @.agents/dockit/references/phases.md
-- @.agents/dockit/references/documentation-types.md
-- @.agents/dockit/references/tiers.md
-- @.agents/dockit/references/sections.md
-- @.agents/dockit/references/style-guide.md
+- @../dockit/references/phases.md
+- @../dockit/references/documentation-types.md
+- @../dockit/references/tiers.md
+- @../dockit/references/sections.md
+- @../dockit/references/style-guide.md
 
 Templates:
-- @.agents/dockit/templates/state.md
-- @.agents/dockit/templates/structure.md
-- @.agents/dockit/templates/checklist.md
-- @.agents/dockit/templates/document.md
-- @.agents/dockit/templates/review-report.md
+- @../dockit/templates/state.md
+- @../dockit/templates/structure.md
+- @../dockit/templates/checklist.md
+- @../dockit/templates/document.md
+- @../dockit/templates/review-report.md
 
 Skills:
-- @.agents/skills/figma-context/SKILL.md
+- @../skills/figma-context/SKILL.md
 
 </execution_context>
 

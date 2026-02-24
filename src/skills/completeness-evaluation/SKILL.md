@@ -5,7 +5,7 @@ description: Evaluates whether documentation sections have substantive content. 
 
 # Completeness evaluation
 
-Hard technique for evaluating whether documentation sections have substantive content. Refer to `sections.md` for the full list of sections and their requirements.
+Hard technique for evaluating whether documentation sections have substantive content. Refer to @../../dockit/references/sections.md for the full list of sections and their requirements.
 
 ## How to evaluate completeness
 
@@ -35,7 +35,7 @@ For each section present in the document, evaluate the substance according to th
 ### Complete
 
 - Section has substantive content that addresses its purpose
-- Guiding questions from `sections.md` are answered
+- Guiding questions from @../../dockit/references/sections.md are answered
 - Content is specific, not generic
 - Cross-references to other sections are present where expected
 

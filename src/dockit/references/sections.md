@@ -4,7 +4,7 @@ The sections that make up each documentation category, with guidance on what the
 
 ## Overview
 
-Every document in the design system follows a section structure determined by its category — either **construct** or **concept** (see `documentation-types.md` for the full taxonomy). This file defines the sections available for each category.
+Every document in the design system follows a section structure determined by its category — either **construct** or **concept** (see @./documentation-types.md for the full taxonomy). This file defines the sections available for each category.
 
 Not every section is required for every document. During the structure phase, the user selects which sections apply and in what order.
 
@@ -21,7 +21,7 @@ Construct documentation covers foundations, components, complex components, patt
 <covers>
 - Name of the construct
 - Documentation type (foundation, component, complex component, pattern, layout, or page)
-- Tier (Global, Sites, Apps, Pro, or Stores — see `tiers.md`)
+- Tier (Global, Sites, Apps, Pro, or Stores — see @./tiers.md)
 - Link to an example image of the construct
 </covers>
 
@@ -202,7 +202,7 @@ Concept documentation covers architecture, principles, definitions, and decision
 <covers>
 - Name of the concept
 - Documentation type (architecture, principles, definitions, or decision guide)
-- Tier (Global, Sites, Apps, Pro, or Stores — see `tiers.md`)
+- Tier (Global, Sites, Apps, Pro, or Stores — see @./tiers.md)
 </covers>
 
 <guiding_questions>

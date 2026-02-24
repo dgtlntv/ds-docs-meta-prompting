@@ -11,10 +11,10 @@ Add new sections to a document that has already completed the Structure phase. D
 <execution_context>
 
 Workflow:
-- @.agents/dockit/workflows/add-section.md
+- @../dockit/workflows/add-section.md
 
 References:
-- @.agents/dockit/references/sections.md
+- @../dockit/references/sections.md
 
 </execution_context>
 

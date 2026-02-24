@@ -11,7 +11,7 @@ Read STATE.md and all checklists to present a comprehensive progress summary.
 <execution_context>
 
 Workflow:
-- @.agents/dockit/workflows/progress.md
+- @../dockit/workflows/progress.md
 
 </execution_context>
 

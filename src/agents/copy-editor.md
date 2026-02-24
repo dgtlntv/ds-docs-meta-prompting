@@ -40,7 +40,7 @@ You do not check:
 1. Read the documentation file to review
 2. Apply the `copy-editing-evaluation` skill
 3. Run the deterministic pass using `copy-editing.js` from the `copy-editing-evaluation` skill directory
-4. Present findings following the output format in `ui-formatting.md`
+4. Present findings following the output format in @../dockit/references/ui-formatting.md
 </process>
 
 <skill>
