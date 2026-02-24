@@ -1,10 +1,22 @@
 import { execSync } from "node:child_process";
-import { cpSync, rmSync, mkdirSync, statSync } from "node:fs";
-import { resolve } from "node:path";
+import {
+  cpSync,
+  rmSync,
+  mkdirSync,
+  statSync,
+  readFileSync,
+  writeFileSync,
+} from "node:fs";
+import { resolve, join } from "node:path";
+import { globSync } from "node:fs";
 
 const root = resolve(import.meta.dirname, "..");
 const src = resolve(root, "src");
 const dist = resolve(root, "dist");
+
+// Agent folder name — the directory these files will live under in a project
+// e.g. ".claude" produces paths like @.claude/dockit/references/sections.md
+const agentFolder = process.env.AGENT_FOLDER ?? ".claude";
 
 // Clean dist
 rmSync(dist, { recursive: true, force: true });
@@ -14,7 +26,7 @@ mkdirSync(dist, { recursive: true });
 console.log("Compiling TypeScript...");
 execSync("npx tsc", { cwd: root, stdio: "inherit" });
 
-// Copy non-TS files (markdown, json data files) preserving structure
+// Copy non-TS files (markdown, json, txt) preserving structure
 console.log("Copying markdown and data files...");
 cpSync(src, dist, {
   recursive: true,
@@ -36,4 +48,29 @@ cpSync(src, dist, {
   },
 });
 
+// Replace {AGENT_FOLDER} placeholder in all copied text files
+console.log(`Replacing {AGENT_FOLDER} with "${agentFolder}"...`);
+let replacedCount = 0;
+
+function walkDir(dir: string): string[] {
+  const entries = statSync(dir).isDirectory()
+    ? readdirSync(dir).flatMap((e) => walkDir(join(dir, e)))
+    : [dir];
+  return entries;
+}
+
+import { readdirSync } from "node:fs";
+
+for (const filePath of walkDir(dist)) {
+  if (!filePath.endsWith(".md") && !filePath.endsWith(".txt")) continue;
+
+  const content = readFileSync(filePath, "utf-8");
+  if (!content.includes("{AGENT_FOLDER}")) continue;
+
+  const updated = content.replaceAll("{AGENT_FOLDER}", agentFolder);
+  writeFileSync(filePath, updated);
+  replacedCount++;
+}
+
+console.log(`  Replaced in ${replacedCount} files.`);
 console.log("Build complete.");

@@ -4,7 +4,7 @@ The voice and writing standards for all design system documentation produced wit
 
 ## Overview
 
-This guide defines how documentation reads — the tone, word choices, sentence structure, formatting, and accessibility standards that apply to every document regardless of its type or tier. All content produced during the revision phase (see @./phases.md) is measured against these rules.
+This guide defines how documentation reads — the tone, word choices, sentence structure, formatting, and accessibility standards that apply to every document regardless of its type or tier. All content produced during the revision phase (see @{AGENT_FOLDER}/dockit/references/phases.md) is measured against these rules.
 
 ---
 
@@ -53,7 +53,7 @@ This guide defines how documentation reads — the tone, word choices, sentence 
 
 ### Flagged words and phrases
 
-Some words and phrases should not appear in documentation. Some have a preferred replacement; others are strictly forbidden and require restructuring the sentence. The full machine-readable list is in @./flagged-words.txt (in the same directory as this file).
+Some words and phrases should not appear in documentation. Some have a preferred replacement; others are strictly forbidden and require restructuring the sentence. The full machine-readable list is in @{AGENT_FOLDER}/dockit/references/flagged-words.txt (in the same directory as this file).
 
 ### Component terminology
 

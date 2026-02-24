@@ -1,6 +1,6 @@
 # Workflow: Review
 
-Runs all review agents against a document and presents consolidated findings. Covers Phase 5 (Review) and Phase 6 (Polish) from @../references/phases.md.
+Runs all review agents against a document and presents consolidated findings. Covers Phase 5 (Review) and Phase 6 (Polish) from @{AGENT_FOLDER}/dockit/references/phases.md.
 
 ## Prerequisites
 
@@ -24,16 +24,16 @@ Verify that all sections in `.planning/docs/{doc-name}/checklist.md` are in `rev
 
 Spawn up to 4 review agents in parallel, each using its corresponding skill:
 
-1. **Voice reviewer** — uses the `brand-voice-evaluation` skill and @../references/style-guide.md
+1. **Voice reviewer** — uses the `brand-voice-evaluation` skill and @{AGENT_FOLDER}/dockit/references/style-guide.md
 2. **Readability reviewer** — uses the `readability-evaluation` skill
-3. **Completeness reviewer** — uses the `completeness-evaluation` skill and @../references/sections.md
+3. **Completeness reviewer** — uses the `completeness-evaluation` skill and @{AGENT_FOLDER}/dockit/references/sections.md
 4. **Copy editor** — uses the `copy-editing-evaluation` skill
 
 ---
 
 ### Step 3: Consolidate findings
 
-Collect results from all reviewers and merge them into a single review report. Write the report to `.planning/reviews/{doc-name}-review.md`, following the template in @../templates/review-report.md.
+Collect results from all reviewers and merge them into a single review report. Write the report to `.planning/reviews/{doc-name}-review.md`, following the template in @{AGENT_FOLDER}/dockit/templates/review-report.md.
 
 Update `.planning/STATE.md` to set the document phase to `Review`.
 
@@ -47,7 +47,7 @@ Present the consolidated findings to the user, grouped by severity.
 
 ### Step 5: Polish
 
-Enter Phase 6 (Polish) as described in @../references/phases.md. For each finding, the user decides how to handle it: skip, fix now, send back to drafting, or send back to revision.
+Enter Phase 6 (Polish) as described in @{AGENT_FOLDER}/dockit/references/phases.md. For each finding, the user decides how to handle it: skip, fix now, send back to drafting, or send back to revision.
 
 After all findings are resolved, update `STATE.md` to reflect the final document phase.
 

@@ -36,8 +36,8 @@ You do not check:
 
 1. Read `.planning/docs/{doc-name}/structure.md` to know what was planned
 2. Read the documentation file to review
-3. Apply the `completeness-evaluation` skill, referencing @../dockit/references/sections.md for guiding questions and minimum thresholds
-4. Present findings following the output format in @../dockit/references/ui-formatting.md
+3. Apply the `completeness-evaluation` skill, referencing @{AGENT_FOLDER}/dockit/references/sections.md for guiding questions and minimum thresholds
+4. Present findings following the output format in @{AGENT_FOLDER}/dockit/references/ui-formatting.md
 
 </process>
 

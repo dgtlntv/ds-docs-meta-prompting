@@ -35,10 +35,10 @@ You do not check:
 
 <process>
 
-1. Read the style guide at @../dockit/references/style-guide.md
+1. Read the style guide at @{AGENT_FOLDER}/dockit/references/style-guide.md
 2. Read the documentation file to review
 3. Apply the `brand-voice-evaluation` skill
-4. Present findings following the output format in @../dockit/references/ui-formatting.md
+4. Present findings following the output format in @{AGENT_FOLDER}/dockit/references/ui-formatting.md
 
 </process>
 

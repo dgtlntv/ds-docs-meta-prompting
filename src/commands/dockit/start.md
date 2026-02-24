@@ -11,24 +11,24 @@ Single entry point for all dockit work. Detects the current state and routes to 
 <execution_context>
 
 Workflow:
-- @../../dockit/workflows/start.md
+- @{AGENT_FOLDER}/dockit/workflows/start.md
 
 References:
-- @../../dockit/references/phases.md
-- @../../dockit/references/documentation-types.md
-- @../../dockit/references/tiers.md
-- @../../dockit/references/sections.md
-- @../../dockit/references/style-guide.md
+- @{AGENT_FOLDER}/dockit/references/phases.md
+- @{AGENT_FOLDER}/dockit/references/documentation-types.md
+- @{AGENT_FOLDER}/dockit/references/tiers.md
+- @{AGENT_FOLDER}/dockit/references/sections.md
+- @{AGENT_FOLDER}/dockit/references/style-guide.md
 
 Templates:
-- @../../dockit/templates/state.md
-- @../../dockit/templates/structure.md
-- @../../dockit/templates/checklist.md
-- @../../dockit/templates/document.md
-- @../../dockit/templates/review-report.md
+- @{AGENT_FOLDER}/dockit/templates/state.md
+- @{AGENT_FOLDER}/dockit/templates/structure.md
+- @{AGENT_FOLDER}/dockit/templates/checklist.md
+- @{AGENT_FOLDER}/dockit/templates/document.md
+- @{AGENT_FOLDER}/dockit/templates/review-report.md
 
 Skills:
-- @../../skills/figma-context/SKILL.md
+- @{AGENT_FOLDER}/skills/figma-context/SKILL.md
 
 </execution_context>
 

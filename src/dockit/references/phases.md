@@ -31,8 +31,8 @@ User runs `/dockit:start` with no existing `.planning/STATE.md`.
 <activities>
 
 - Identify the name of the construct or concept
-- Identify the documentation type — reference @./documentation-types.md for the available types
-- Identify the tier — reference @./tiers.md for the available tiers
+- Identify the documentation type — reference @{AGENT_FOLDER}/dockit/references/documentation-types.md for the available types
+- Identify the tier — reference @{AGENT_FOLDER}/dockit/references/tiers.md for the available tiers
 - Gather existing specs, designs, or prior documentation — ask what the user wants to keep from any old documentation
 - Identify the primary consumers of this documentation (designers, developers, content writers)
 - If it is a **construct**:
@@ -57,7 +57,7 @@ After the user has answered all discovery questions, ask (with the `AskUserQuest
 </activities>
 
 <artifacts>
-- `.planning/STATE.md` — populated with discovery answers, following @../templates/state.md
+- `.planning/STATE.md` — populated with discovery answers, following @{AGENT_FOLDER}/dockit/templates/state.md
 </artifacts>
 
 <exit_criteria>
@@ -82,16 +82,16 @@ Discovery phase complete. Or user runs `/dockit:add-section` to add sections to 
 
 <activities>
 
-- Present the section checklist for the chosen documentation type — reference @./sections.md
+- Present the section checklist for the chosen documentation type — reference @{AGENT_FOLDER}/dockit/references/sections.md
 - The user selects which sections they want to include — this is a free choice, not all sections are required
 - If the `AskUserQuestion` tool is available, use it with `multiselect` set to `true`
 
 </activities>
 
 <artifacts>
-- `.planning/docs/{doc-name}/structure.md` — following @../templates/structure.md
-- `.planning/docs/{doc-name}/checklist.md` — following @../templates/checklist.md
-- `docs/{doc-name}.md` — following @../templates/document.md
+- `.planning/docs/{doc-name}/structure.md` — following @{AGENT_FOLDER}/dockit/templates/structure.md
+- `.planning/docs/{doc-name}/checklist.md` — following @{AGENT_FOLDER}/dockit/templates/checklist.md
+- `docs/{doc-name}.md` — following @{AGENT_FOLDER}/dockit/templates/document.md
 </artifacts>
 
 <exit_criteria>
@@ -130,7 +130,7 @@ Before starting, check whether this section has been sent back from Phase 6 (Pol
 For a section entering this phase for the first time (no prior review context):
 
 1. Explain what the section typically covers — without writing content for the user
-2. Ask the guiding questions for that section (from @./sections.md)
+2. Ask the guiding questions for that section (from @{AGENT_FOLDER}/dockit/references/sections.md)
 3. The user writes the content
 4. Gently check coverage: "Have you considered X?" / "This section typically also covers Y" — do not critique quality, only check that the most important substance is present
 5. Mark the section as `draft` in the checklist
@@ -223,7 +223,7 @@ User runs `/dockit:review` (or individual check commands). All sections must be 
 
 Spawn review agents (up to 4 in parallel):
 
-1. **Voice reviewer** — checks against the style guide at @./style-guide.md
+1. **Voice reviewer** — checks against the style guide at @{AGENT_FOLDER}/dockit/references/style-guide.md
 2. **Readability reviewer** — Flesch-Kincaid scoring and qualitative analysis
 3. **Completeness reviewer** — section coverage verification
 4. **Copy editor** — grammar, spelling, and formatting
@@ -233,7 +233,7 @@ Collect and merge results into a consolidated review report.
 </activities>
 
 <artifacts>
-- `.planning/reviews/{doc-name}-review.md` — following @../templates/review-report.md
+- `.planning/reviews/{doc-name}-review.md` — following @{AGENT_FOLDER}/dockit/templates/review-report.md
 </artifacts>
 
 <exit_criteria>
@@ -323,7 +323,7 @@ A section can only move forward one phase at a time during normal progression. I
 
 ## Phase tracking in STATE.md
 
-`STATE.md` tracks both the document-level status and per-section progress. See @../templates/state.md for the full structure.
+`STATE.md` tracks both the document-level status and per-section progress. See @{AGENT_FOLDER}/dockit/templates/state.md for the full structure.
 
 Document-level phase values: `Discovery`, `Structure`, `In progress`, `Review`, `Complete`
 

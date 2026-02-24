@@ -9,7 +9,7 @@ Hard technique for evaluating documentation against a team's brand voice guideli
 
 ## The style guide
 
-dockit ships with a built-in style guide at @../../dockit/references/style-guide.md. This is the source of truth for all voice evaluation — always read it before evaluating any content.
+dockit ships with a built-in style guide at @{AGENT_FOLDER}/dockit/references/style-guide.md. This is the source of truth for all voice evaluation — always read it before evaluating any content.
 
 Read the entire style guide before evaluating any content. Build a mental checklist from it.
 

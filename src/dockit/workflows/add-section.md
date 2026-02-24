@@ -4,8 +4,8 @@ Adds one or more sections to an existing document. Does not continue into drafti
 
 ## Prerequisites
 
-- `.planning/STATE.md` must exist with at least one document. If it does not exist, switch to the @./start.md workflow.
-- `.planning/docs/{doc-name}/structure.md` and `.planning/docs/{doc-name}/checklist.md` must exist. If they do not exist, the document has not completed the Structure phase — switch to the @./start.md workflow, which will resume from the appropriate step.
+- `.planning/STATE.md` must exist with at least one document. If it does not exist, switch to the @{AGENT_FOLDER}/dockit/workflows/start.md workflow.
+- `.planning/docs/{doc-name}/structure.md` and `.planning/docs/{doc-name}/checklist.md` must exist. If they do not exist, the document has not completed the Structure phase — switch to the @{AGENT_FOLDER}/dockit/workflows/start.md workflow, which will resume from the appropriate step.
 
 ---
 
@@ -21,7 +21,7 @@ Read `.planning/STATE.md`. If multiple documents exist, ask the user which docum
 
 ### Step 2: Present available sections
 
-Read `.planning/docs/{doc-name}/structure.md` to determine which sections the document already has. Reference @../references/sections.md for the full list of sections available for the document's category (construct or concept).
+Read `.planning/docs/{doc-name}/structure.md` to determine which sections the document already has. Reference @{AGENT_FOLDER}/dockit/references/sections.md for the full list of sections available for the document's category (construct or concept).
 
 Present only the sections not already included. If the `AskUserQuestion` tool is available, use it with `multiselect` set to `true`.
 
@@ -31,7 +31,7 @@ Present only the sections not already included. If the `AskUserQuestion` tool is
 
 1. Add the new sections to `.planning/docs/{doc-name}/structure.md`.
 2. Add the new sections to `.planning/docs/{doc-name}/checklist.md` with status `pending`.
-3. Add H2 headings for the new sections to `docs/{doc-name}.md` in the appropriate position relative to existing sections. Use the default section order from @../references/sections.md as a guide.
+3. Add H2 headings for the new sections to `docs/{doc-name}.md` in the appropriate position relative to existing sections. Use the default section order from @{AGENT_FOLDER}/dockit/references/sections.md as a guide.
 4. Update `STATE.md` to reflect the new section count.
 
 ---

@@ -6,7 +6,7 @@ How the agent questions users throughout the dockit workflow.
 
 The agent is a thinking partner, not an author. Its job is to ask questions that help the user articulate what they already know — or discover what they have not considered yet. The agent does not write documentation content or invent rules. It guides.
 
-All questions should follow the voice defined in @./style-guide.md — approachable, precise, and authoritative without being arrogant.
+All questions should follow the voice defined in @.claude/dockit/references/style-guide.md — approachable, precise, and authoritative without being arrogant.
 
 ---
 
@@ -39,7 +39,7 @@ When a user writes something vague, ask for specifics:
 
 Signs a section has enough content:
 
-- The user has addressed the guiding questions for that section (see @./sections.md)
+- The user has addressed the guiding questions for that section (see @.claude/dockit/references/sections.md)
 - Answers are specific and actionable, not vague or placeholder
 - Cross-references to other sections are consistent
 - The user explicitly says they are done

@@ -38,7 +38,7 @@ You do not check:
 1. Run the deterministic pass using `readability-score.js` from the `readability-evaluation` skill directory
 2. Read the documentation file to review
 3. Apply the `readability-evaluation` skill
-4. Present findings following the output format in @../dockit/references/ui-formatting.md
+4. Present findings following the output format in @{AGENT_FOLDER}/dockit/references/ui-formatting.md
 
 </process>
 

@@ -25,12 +25,12 @@ node <skill-directory>/copy-editing.js <file.md>
 The script:
 
 - Checks spelling using cspell with a standard English dictionary
-- Flags words from @../../dockit/references/flagged-words.txt in the style guide references directory (includes forbidden words and words with preferred substitutions)
+- Flags words from @.claude/dockit/references/flagged-words.txt in the style guide references directory (includes forbidden words and words with preferred substitutions)
 - Checks heading hierarchy (skipped levels, multiple H1s) and sentence case
 - Detects em-dashes
 - Outputs JSON to stdout
 
-Multi-word phrases in @../../dockit/references/flagged-words.txt (e.g. "in order to", "end user") are not detected by the script. Flag those during the qualitative pass.
+Multi-word phrases in @.claude/dockit/references/flagged-words.txt (e.g. "in order to", "end user") are not detected by the script. Flag those during the qualitative pass.
 
 ### Output structure
 
@@ -98,7 +98,7 @@ The script outputs a JSON object with five keys:
 
 **`spelling`** — misspelled words detected by cspell. Each entry has the `word`, the `line` number (1-indexed), and the character `offset` from the start of the file.
 
-**`forbiddenWords`** — words from @../../dockit/references/flagged-words.txt found in the document. Entries with a `suggestion` field are words that have a preferred replacement. Entries without `suggestion` are strictly forbidden and should be removed or the sentence restructured.
+**`forbiddenWords`** — words from @.claude/dockit/references/flagged-words.txt found in the document. Entries with a `suggestion` field are words that have a preferred replacement. Entries without `suggestion` are strictly forbidden and should be removed or the sentence restructured.
 
 **`headings`** — heading hierarchy and capitalisation issues. The `type` field is one of `skipped-level`, `multiple-h1`, or `not-sentence-case`. The `message` field provides a human-readable description.
 
@@ -122,7 +122,7 @@ The following checks are performed by the LLM during the qualitative pass. The s
 
 ### Multi-word flagged phrases
 
-The script only flags single words. During the qualitative pass, also check for multi-word phrases from @../../dockit/references/flagged-words.txt such as "in order to", "for the purpose of", "end user", and "in conjunction with".
+The script only flags single words. During the qualitative pass, also check for multi-word phrases from @.claude/dockit/references/flagged-words.txt such as "in order to", "for the purpose of", "end user", and "in conjunction with".
 
 ### Spelling: DS-specific terminology
 
@@ -149,7 +149,7 @@ Common terms and their preferred spellings. Flag deviations.
 | backend | back-end, back end |
 | webpage | web page |
 
-The style guide at @../../dockit/references/style-guide.md has its own terminology section. If it specifies a different preference, the style guide wins.
+The style guide at @.claude/dockit/references/style-guide.md has its own terminology section. If it specifies a different preference, the style guide wins.
 
 </spelling>
 
