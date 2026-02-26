@@ -18,6 +18,11 @@ dockit commands:
                        Detects the current state and routes to the
                        appropriate phase automatically.
 
+  /dockit:import       Import existing documentation into the workflow.
+                       Analyzes source material, maps content to
+                       sections, and sets up for continuation with
+                       /dockit:start.
+
   /dockit:add-section  Add sections to an existing document.
                        Does not continue into drafting — run
                        /dockit:start afterwards to resume work.
@@ -29,7 +34,8 @@ dockit commands:
   /dockit:help         This help message.
 
 Getting started:
-  1. Run /dockit:start to begin a new document or resume existing work
+  1. Run /dockit:start to begin a new document from scratch,
+     or /dockit:import to bring in existing documentation
   2. Write section by section — drafting then revision
   3. Run /dockit:review when all sections are revised
 ```
