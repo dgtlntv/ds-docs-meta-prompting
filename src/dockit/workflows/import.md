@@ -104,10 +104,15 @@ Create the planning directory and all standard artifacts:
 
 Ask the user (with the `AskUserQuestion` tool if available) whether a `dockit-overlap-reviewer` agent should be spawned to check for overlap with existing documentation.
 
-- If the user agrees, spawn a `dockit-overlap-reviewer` agent with the inferred discovery answers as context.
-- If overlap is found, inform the user and ask whether they want to adjust the document's name, scope, or type.
+- If the user agrees, spawn a `dockit-overlap-reviewer` agent with the inferred discovery answers and the mapped section list as context.
+- The `dockit-overlap-reviewer` should distinguish between three outcomes:
+  - **Duplicate** — the imported document covers the same ground as an existing document (same topic, same aspects, same audience). This is true overlap and the user should disambiguate or reconsider.
+  - **Complementary** — an existing document covers the same topic, but the imported material addresses different aspects, a different angle, or different sections. This is not a conflict — inform the user what already exists so they can reference or link to it, but do not discourage them from proceeding. This is a common and expected outcome when importing, since the user is often adding to an already-documented topic.
+  - **No overlap** — no existing documentation covers this topic.
+- If the outcome is **duplicate**, inform the user and ask whether they want to adjust the document's name, scope, or type — or merge with the existing document.
+- If the outcome is **complementary**, inform the user what already exists and suggest they consider how the imported document relates to it. Encourage them to continue.
 - If the user makes changes, update `STATE.md`, `structure.md`, and the import report accordingly. Offer another redundancy check if the changes were significant.
-- Continue until no overlap is found or the user declines further review.
+- Continue until there is no duplicate overlap, or the user declines further review.
 
 ---
 

@@ -50,9 +50,14 @@ User runs `/dockit:start` with no existing `.planning/STATE.md`.
 After the user has answered all discovery questions, ask (with the `AskUserQuestion` tool if available) whether a `dockit-overlap-reviewer` agent should be spawned to check for overlap with existing documentation.
 
 - If the user agrees, spawn a `dockit-overlap-reviewer` agent with the discovery answers as context
-- If the `dockit-overlap-reviewer` concludes there is overlap (in naming, intended use case, or scope), inform the user and ask whether they want to disambiguate
+- The `dockit-overlap-reviewer` should distinguish between three outcomes:
+  - **Duplicate** — the new document covers the same ground as an existing document (same topic, same aspects, same audience). This is true overlap and the user should disambiguate or reconsider.
+  - **Complementary** — an existing document covers the same topic, but the new document addresses different aspects, a different angle, or different sections (e.g. existing docs cover usage but the new document covers architecture). This is not a conflict — inform the user what already exists so they can reference or link to it, but do not discourage them from proceeding.
+  - **No overlap** — no existing documentation covers this topic.
+- If the outcome is **duplicate**, inform the user and ask whether they want to disambiguate, merge with the existing document, or proceed anyway
+- If the outcome is **complementary**, inform the user what already exists and suggest they consider how the new document relates to it — but encourage them to continue
 - If the user changes their answers based on the review, ask whether they want to spawn another `dockit-overlap-reviewer` with the updated answers
-- Continue this loop until the `dockit-overlap-reviewer` concludes there is no overlap, or the user declines further review
+- Continue this loop until the `dockit-overlap-reviewer` concludes there is no duplicate overlap, or the user declines further review
 
 </activities>
 

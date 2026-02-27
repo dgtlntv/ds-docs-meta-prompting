@@ -1,0 +1,68 @@
+# Flagged words and phrases
+#
+# Words and phrases that should not appear in documentation.
+# Lines with an arrow (→) include a suggested replacement.
+# Lines without an arrow are strictly forbidden — remove them or restructure the sentence.
+#
+# Format:
+#   word or phrase → replacement
+#   word or phrase
+
+# Forbidden — no replacement, restructure the sentence
+simply
+just
+easily
+obviously
+please
+basically
+it should be noted that
+as a matter of fact
+in terms of
+
+# Substitutions — use the replacement instead
+assist → help
+assistance → help
+alleviate → ease, reduce, lessen
+ameliorate → improve
+approximately → about
+roughly → about
+ascertain → learn
+attempt → try
+cease → stop
+click → select
+tap → select
+commence → start, begin
+initiate → start, begin
+desist → stop
+discontinue → stop
+display → show
+eliminate → stop
+execute → stop
+terminate → stop
+kill → stop
+end user → user
+ensure → make sure
+facilitate → help
+for the purpose of → to
+functionality → feature
+henceforth → from now on
+hitherto → until now
+if this is the case → if so
+if this is not the case → if not
+in conjunction with → with
+in order to → to
+leverage → use
+utilize → use
+employ → use
+magnitude → size
+manufacture → make
+necessitate → need, have to, require
+numerous → many
+possesses → has
+prior to → before
+purchase → buy
+regarding → about, concerning
+with regard to → about, concerning
+requested → asked
+subsequently → later
+whilst → while
